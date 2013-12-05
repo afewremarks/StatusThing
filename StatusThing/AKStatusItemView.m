@@ -170,6 +170,16 @@
     [self setNeedsDisplay: YES];
 }
 
+- (void) menuNeedsUpdate:(NSMenu *)menu
+{
+    NSLog(@"Update!");
+    if ([NSEvent modifierFlags] & NSAlternateKeyMask)
+    {
+        NSLog(@"DID!");
+    }
+    
+}
+
 - (void)updateTrackingAreas
 {
  
@@ -200,5 +210,7 @@
     }
     
 }
+
+
 
 @end

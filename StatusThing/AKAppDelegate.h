@@ -5,8 +5,9 @@
 #import "AKSettings.h"
 #import "AKLaunchItem.h"
 #import "AKStatusItemView.h"
+#import "AKDimmerView.h"
 
-@interface AKAppDelegate : NSObject <NSApplicationDelegate, AKSmartThingsDelegate, NSTextDelegate, AKStatusItemViewDelegate>
+@interface AKAppDelegate : NSObject <NSApplicationDelegate, AKSmartThingsDelegate, NSTextDelegate, AKStatusItemViewDelegate, NSMenuDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 

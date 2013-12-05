@@ -36,9 +36,9 @@
     
     
     // Setup the menu for the status bar item
-    self.statusMenu = [[NSMenu alloc] initWithTitle: @"Menu"];
+    self.statusMenu = [[NSMenu alloc] initWithTitle: @"Menu"];    
     [self.statusItem setMenu: self.statusMenu];
-   
+
     // Use a custom view so we can preload data on mouse over
     self.statusItemView = [[AKStatusItemView alloc] initWithStatusItem: self.statusItem];
     [self.statusItemView setDelegate: self];
@@ -265,7 +265,7 @@
     {
         
         NSUInteger itemTag = (100 + [self.items indexOfObject: item]);
-        
+
         // Does this item already exist?
         NSMenuItem *itemMenuItem = [self.statusMenu itemWithTag: itemTag];
         
@@ -283,6 +283,44 @@
             
             // Add the item
             [self.statusMenu insertItem: itemMenuItem atIndex: position];
+            
+            
+        }
+        
+        // Move forward
+        position++;
+        
+        // Alternate tag
+        NSUInteger altItemTag = (500 + [self.items indexOfObject: item]);
+
+        // Does this item already exist?
+        NSMenuItem *alternateMenuItem = [self.statusMenu itemWithTag: altItemTag];
+        
+        // Create a new one if it doesn't exist
+        if (alternateMenuItem == nil)
+        {
+            
+            
+            // Alternate Item
+            alternateMenuItem = [[NSMenuItem alloc] initWithTitle: @"FUNKY!"
+                                                           action: @selector(itemClick:)
+                                                    keyEquivalent: @""];
+            
+            AKDimmerView *dimmer = [[AKDimmerView alloc] initWithFrame: NSMakeRect(0.0, 0.0, 1.0, 32.0)];
+            dimmer.autoresizingMask = NSViewWidthSizable;
+
+            [alternateMenuItem setView: dimmer];
+
+            [alternateMenuItem setAlternate: YES];
+            
+            // Set the tag
+            [alternateMenuItem setTag: altItemTag];
+            
+            [alternateMenuItem setKeyEquivalentModifierMask:NSAlternateKeyMask];
+            
+            // Add the item
+            [self.statusMenu insertItem: alternateMenuItem atIndex: position];
+            
         }
         
         // Set the on off status

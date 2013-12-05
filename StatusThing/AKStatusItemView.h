@@ -17,6 +17,7 @@
 
 - (void)menuWillOpen:(NSMenu *)menu;
 - (void)menuDidClose:(NSMenu *)menu;
+- (void) menuNeedsUpdate:(NSMenu *)menu;
 
 - (void) mouseEntered:(NSEvent *)event;
 

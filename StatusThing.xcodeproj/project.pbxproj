@@ -22,6 +22,7 @@
 		64B497C5183737F8007BB1D0 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 64B497C1183735DD007BB1D0 /* Sparkle.framework */; };
 		64B497C718373E5D007BB1D0 /* sparkle-public-key.pem in Resources */ = {isa = PBXBuildFile; fileRef = 64B497C618373E5D007BB1D0 /* sparkle-public-key.pem */; };
 		64B497CA1839D035007BB1D0 /* AKLaunchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B497C91839D035007BB1D0 /* AKLaunchItem.m */; };
+		64D4E0371850357000326D36 /* AKDimmerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D4E0361850357000326D36 /* AKDimmerView.m */; };
 		64DE5064184ACCB9004446E1 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 64DE5063184ACCB9004446E1 /* Credits.rtf */; };
 		B69F5283100C4CBD930BB43F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA0628C4E3D4093B823CE66 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -82,6 +83,8 @@
 		64B497C618373E5D007BB1D0 /* sparkle-public-key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "sparkle-public-key.pem"; sourceTree = "<group>"; };
 		64B497C81839D035007BB1D0 /* AKLaunchItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKLaunchItem.h; sourceTree = "<group>"; };
 		64B497C91839D035007BB1D0 /* AKLaunchItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKLaunchItem.m; sourceTree = "<group>"; };
+		64D4E0351850357000326D36 /* AKDimmerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKDimmerView.h; sourceTree = "<group>"; };
+		64D4E0361850357000326D36 /* AKDimmerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKDimmerView.m; sourceTree = "<group>"; };
 		64DE5063184ACCB9004446E1 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = Credits.rtf; path = ../Credits.rtf; sourceTree = "<group>"; };
 		ABA0628C4E3D4093B823CE66 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -162,6 +165,8 @@
 				6415A5B8182F4E1300EEBAA2 /* AKAppDelegate.m */,
 				6404182E1845BCF800570C25 /* AKStatusItemView.h */,
 				6404182F1845BCF800570C25 /* AKStatusItemView.m */,
+				64D4E0351850357000326D36 /* AKDimmerView.h */,
+				64D4E0361850357000326D36 /* AKDimmerView.m */,
 				6415A5BA182F4E1300EEBAA2 /* MainMenu.xib */,
 				6415A5BD182F4E1300EEBAA2 /* Images.xcassets */,
 				6415A5AC182F4E1300EEBAA2 /* Supporting Files */,
@@ -355,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64D4E0371850357000326D36 /* AKDimmerView.m in Sources */,
 				640418301845BCF800570C25 /* AKStatusItemView.m in Sources */,
 				6415A5B9182F4E1300EEBAA2 /* AKAppDelegate.m in Sources */,
 				64490A881832AF6F006F8D10 /* AKSettings.m in Sources */,
